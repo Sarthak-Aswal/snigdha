@@ -1,0 +1,31 @@
+:root{
+    /* CSS HEX */
+--thistle: #cdb4dbff;
+--fairy-tale: #ffc8ddff;
+--carnation-pink: #ffafccff;
+--uranian-blue: #bde0feff;
+--light-sky-blue: #a2d2ffff;
+ margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+body{
+    background-color: white;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.message{
+    border: black 2px solid;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+}
+
+
+
