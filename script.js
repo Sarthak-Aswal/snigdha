@@ -56,7 +56,7 @@ image.src = `images/${gif}`;
 
 yes.addEventListener('click',()=>{
 message.innerText="Thanks a lot babe a kissi for you";
-image.src = `/images/kiss.gif`;
+image.src = `images/kiss.gif`;
 option.style.display="none";
 maafi.style.display="none";
 image.style.height="450px";
