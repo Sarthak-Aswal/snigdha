@@ -1,31 +1,92 @@
-:root{
+:root {
     /* CSS HEX */
---thistle: #cdb4dbff;
---fairy-tale: #ffc8ddff;
---carnation-pink: #ffafccff;
---uranian-blue: #bde0feff;
---light-sky-blue: #a2d2ffff;
- margin: 0;
-padding: 0;
-box-sizing: border-box;
+    --thistle: #cdb4dbff; /* Light Purple */
+    --fairy-tale: #ffc8ddff; /* Light Pink */
+    --carnation-pink: #ffafccff; /* Pink */
+    --uranian-blue: #bde0feff; /* Light Blue */
+    --light-sky-blue: #a2d2ffff; /* Soft Blue */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+}
+h2{
+    text-align: center;
+    position: fixed;
+    top: 10px;
+    left: 60px;
+    font-size: 2.5rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background-color: var(--fairy-tale); /* Light Pink background */
+    font-family: 'Open Sans', sans-serif; /* Add a font for the body */
 }
-body{
-    background-color: white;
-}
-.main {
+
+main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
-}
-.message{
-    border: black 2px solid;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-radius: 1rem;
+    gap: 2rem;
+    padding-top: 3rem;
 }
 
+#gif {
+    width: auto;
+    height: 250px;
+}
+
+#message {
+   
+    text-align: center;
+    color: black; /* Use light purple for the message */
+     font-weight: 900;
+}
 
 
+
+.btn {
+    width: 7rem;
+    padding: 0.6rem 1rem;
+    border-radius: 1.5rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: solid white 2px;
+    transition: background-color 0.3s ease; /* Add a transition effect */
+}
+
+.options {
+    display: flex;
+    gap: 3rem;
+}
+
+#no {
+    background-color: rgb(221, 69, 69); /* Keep the original red color */
+}
+
+#yes {
+    background-color: rgb(90, 238, 90); /* Keep the original green color */
+}
+
+
+
+/* Add styles for media queries (responsive design) */
+@media (max-width: 768px) {
+    #message, p {
+        font-size: 2rem; /* Reduce font size on smaller screens */
+        font-weight: 900;
+    }
+
+    .btn {
+        width: 7rem; /* Smaller buttons on mobile */
+        font-size: 1.5rem; /* Smaller font size on mobile */
+    }
+}
