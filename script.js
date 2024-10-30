@@ -16,14 +16,12 @@ const content = [
     "Forgive me!!",
     "Please accept my apologies!!",
     "Lo siento",
-
-
 ];
 
-// Generate a random number between 1 and 16 for the GIF path
+// Generate a random number for the GIF path
 let randomNumber = Math.floor(Math.random() * 15) + 1;
 
-// Generate a random index for the message (0 to 6)
+// Generate a random index for the message
 let randomMessageIndex = Math.floor(Math.random() * content.length);
 
 // Get the corresponding message
@@ -37,14 +35,18 @@ const message = document.getElementById("message");
 const image = document.getElementById("gif");
 const yes = document.getElementById("yes");
 const no = document.getElementById("no");
-const option=document.getElementById("option");
-const maafi=document.getElementById("maafi");
+const option = document.getElementById("option");
+const maafi = document.getElementById("maafi");
+
 // Set the message and image source
 message.innerText = randomMessage;
+
 image.src = `./images/${gif}`;
 
-no.addEventListener("click", function() {
+
+no.addEventListener("click", function () {
     randomMessageIndex = Math.floor(Math.random() * content.length);
+
 
 // Get the corresponding message
 randomMessage = content[randomMessageIndex];
@@ -60,5 +62,6 @@ image.src = `./images/kiss.gif`;
 option.style.display="none";
 maafi.style.display="none";
 image.style.height="450px";
+
 
 });

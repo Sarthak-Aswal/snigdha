@@ -1,23 +1,11 @@
 :root {
-    /* CSS HEX */
-    --thistle: #cdb4dbff; /* Light Purple */
-    --fairy-tale: #ffc8ddff; /* Light Pink */
-    --carnation-pink: #ffafccff; /* Pink */
-    --uranian-blue: #bde0feff; /* Light Blue */
-    --light-sky-blue: #a2d2ffff; /* Soft Blue */
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Oswald', sans-serif;
+    --thistle: #cdb4dbff;
+    --fairy-tale: #ffc8ddff;
+    --carnation-pink: #ffafccff;
+    --uranian-blue: #bde0feff;
+    --light-sky-blue: #a2d2ffff;
 }
-h2{
-    text-align: center;
-    position: fixed;
-    top: 10px;
-    left: 60px;
-    font-size: 2.5rem;
-}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,8 +13,20 @@ h2{
 }
 
 body {
-    background-color: var(--fairy-tale); /* Light Pink background */
-    font-family: 'Open Sans', sans-serif; /* Add a font for the body */
+    background-color: var(--fairy-tale);
+    font-family: 'Oswald', sans-serif;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    position: fixed;
+    top: 10px;
+    left: 60px;
+    font-size: 2.5rem;
 }
 
 main {
@@ -39,18 +39,17 @@ main {
 }
 
 #gif {
-    width: 200px;
-    height: 250px;
+
+    max-width: 100%; /* Allow responsive resizing */
+    height: auto;    /* Maintain aspect ratio */
+
 }
 
 #message {
-   
     text-align: center;
-    color: black; /* Use light purple for the message */
-     font-weight: 900;
+    color: black;
+    font-weight: 900;
 }
-
-
 
 .btn {
     width: 7rem;
@@ -60,7 +59,7 @@ main {
     font-weight: bold;
     font-size: 1.5rem;
     border: solid white 2px;
-    transition: background-color 0.3s ease; /* Add a transition effect */
+    transition: background-color 0.3s ease;
 }
 
 .options {
@@ -69,24 +68,22 @@ main {
 }
 
 #no {
-    background-color: rgb(221, 69, 69); /* Keep the original red color */
+    background-color: rgb(221, 69, 69);
 }
 
 #yes {
-    background-color: rgb(90, 238, 90); /* Keep the original green color */
+    background-color: rgb(90, 238, 90);
 }
 
-
-
-/* Add styles for media queries (responsive design) */
+/* Responsive design */
 @media (max-width: 768px) {
     #message, p {
-        font-size: 2rem; /* Reduce font size on smaller screens */
+        font-size: 2rem;
         font-weight: 900;
     }
 
     .btn {
-        width: 7rem; /* Smaller buttons on mobile */
-        font-size: 1.5rem; /* Smaller font size on mobile */
+        width: 7rem;
+        font-size: 1.5rem;
     }
 }
