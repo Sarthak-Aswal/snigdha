@@ -9,46 +9,41 @@ const content = [
     "Please na yaar!!!",
     "Yahi dosti yahi Pyaar???",
     "Aisa karoge??",
-    "Dedo na pleaseeee!!!",
+    "Maafi Dedo na pleaseeee!!!",
     "请索取",
     "Sorry na yaar",
     "对不起宝贝",
     "Forgive me!!",
     "Please accept my apologies!!",
     "Lo siento",
+    "Maaf Kardo",
 ];
-
-// Generate a random number for the GIF path
-let randomNumber = Math.floor(Math.random() * 15) + 1;
-
-// Generate a random index for the message
-let randomMessageIndex = Math.floor(Math.random() * content.length);
-
-// Get the corresponding message
-let randomMessage = content[randomMessageIndex];
-
-// Set the GIF path
-let gif = `${randomNumber}.gif`;
-
-// Get the elements by their IDs
 const message = document.getElementById("message");
 const image = document.getElementById("gif");
 const yes = document.getElementById("yes");
 const no = document.getElementById("no");
 const option = document.getElementById("option");
 const maafi = document.getElementById("maafi");
-
-// Set the message and image source
-message.innerText = randomMessage;
+// Generate a random number for the GIF path
+let randomNumber = Math.floor(Math.random() * 15) + 1;
+let gif = `${randomNumber}.gif`;
 image.src = `./images/${gif}`; // Ensure this path is correct
 
+let randomMessageIndex = Math.floor(Math.random() * content.length);
+
+let randomMessage = content[randomMessageIndex];
+message.innerText = randomMessage;
+randomNumber = Math.floor(Math.random() * 15) + 1;
+randomMessageIndex = Math.floor(Math.random() * content.length);
 no.addEventListener("click", function () {
-    randomMessageIndex = Math.floor(Math.random() * content.length);
-    randomMessage = content[randomMessageIndex];
-    randomNumber = Math.floor(Math.random() * 15) + 1; // Make sure this matches the number of GIFs
-    message.innerText = randomMessage;
     gif = `${randomNumber}.gif`;
     image.src = `./images/${gif}`;
+    
+    randomMessage = content[randomMessageIndex];
+   
+    message.innerText = randomMessage;
+    randomMessageIndex = Math.floor(Math.random() * content.length);
+    randomNumber = Math.floor(Math.random() * 15) + 1;
 });
 
 yes.addEventListener('click', () => {
