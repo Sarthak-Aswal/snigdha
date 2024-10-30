@@ -40,28 +40,21 @@ const maafi = document.getElementById("maafi");
 
 // Set the message and image source
 message.innerText = randomMessage;
-
-image.src = `./images/${gif}`;
-
+image.src = `./images/${gif}`; // Ensure this path is correct
 
 no.addEventListener("click", function () {
     randomMessageIndex = Math.floor(Math.random() * content.length);
-
-
-// Get the corresponding message
-randomMessage = content[randomMessageIndex];
-randomNumber = Math.floor(Math.random() * 22) + 1;
-message.innerText = randomMessage;
-gif = `${randomNumber}.gif`;
-image.src = `./images/${gif}`;   
+    randomMessage = content[randomMessageIndex];
+    randomNumber = Math.floor(Math.random() * 15) + 1; // Make sure this matches the number of GIFs
+    message.innerText = randomMessage;
+    gif = `${randomNumber}.gif`;
+    image.src = `./images/${gif}`;
 });
 
-yes.addEventListener('click',()=>{
-message.innerText="Thanks a lot babe a kissi for you";
-image.src = `./images/kiss.gif`;
-option.style.display="none";
-maafi.style.display="none";
-image.style.height="450px";
-
-
+yes.addEventListener('click', () => {
+    message.innerText = "Thanks a lot babe a kissi for you";
+    image.src = `./images/kiss.gif`; // Ensure this path is correct
+    option.style.display = "none";
+    maafi.style.display = "none";
+    image.style.height = "450px"; // Adjust if needed
 });

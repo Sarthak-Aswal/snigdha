@@ -39,10 +39,8 @@ main {
 }
 
 #gif {
-
     max-width: 100%; /* Allow responsive resizing */
     height: auto;    /* Maintain aspect ratio */
-
 }
 
 #message {
