@@ -21,13 +21,7 @@ body {
     justify-content: center;
 }
 
-h2 {
-    text-align: center;
-    position: fixed;
-    top: 10px;
-    left: 60px;
-    font-size: 2.5rem;
-}
+
 
 main {
     display: flex;
