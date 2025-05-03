@@ -1,0 +1,123 @@
+/* Responsive Breakpoints */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .penguin{
+    width: 80%;
+    
+  }
+  
+  .countdown-wrapper {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+  
+  .countdown-item {
+    min-width: 70px;
+  }
+  
+  .countdown-value {
+    font-size: 2.5rem;
+  }
+  
+  .countdown-label {
+    font-size: 0.8rem;
+  }
+  
+  .message {
+    font-size: 1.2rem;
+  }
+  
+  .polaroid {
+    max-width: 240px;
+  }
+  
+  .controls {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: 20px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .countdown-value {
+    font-size: 2.8rem;
+  }
+  
+  .message {
+    font-size: 1.3rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .main-container {
+    max-width: 700px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 993px) {
+  .main-container {
+    max-width: 800px;
+  }
+  
+  .title {
+    font-size: 4rem;
+  }
+  
+  .subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .countdown-value {
+    font-size: 3.5rem;
+  }
+  
+  .message {
+    font-size: 1.8rem;
+  }
+}
+
+/* Height-based adjustments */
+@media (max-height: 700px) {
+  .main-container {
+    gap: var(--spacing-md);
+  }
+  
+  header {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .countdown-container {
+    padding: var(--spacing-md);
+  }
+  
+  .photo-container {
+    margin: var(--spacing-md) 0;
+  }
+  
+  .polaroid {
+    padding: 12px 12px 30px 12px;
+  }
+  
+  .controls {
+    margin-top: var(--spacing-md);
+  }
+  
+  footer {
+    margin-top: var(--spacing-md);
+  }
+}

@@ -1,0 +1,292 @@
+:root {
+  /* Color palette */
+  --primary-color: #FFB6C1;
+  --primary-light: #FFC0CB;
+  --primary-dark: #FF69B4;
+  --secondary-color: #E6E6FA;
+  --secondary-dark: #D8BFD8;
+  --accent-color: #FFD700;
+  --text-primary: #4A4A4A;
+  --text-secondary: #6A6A6A;
+  --background-light: #FFF5F8;
+  --background-dark: #2D243B;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  
+  /* Typography */
+  --font-heading: 'Dancing Script', cursive;
+  --font-body: 'Poppins', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  
+  /* Animation */
+  --transition-fast: 0.3s;
+  --transition-medium: 0.5s;
+  --transition-slow: 1s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--background-light);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color var(--transition-medium);
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-md);
+}
+
+body.night-mode {
+  background-color: var(--background-dark);
+  color: var(--secondary-color);
+}
+
+.main-container {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 4px var(--shadow-color);
+  transition: color var(--transition-medium);
+}
+
+body.night-mode .title {
+  color: var(--primary-light);
+}
+
+.subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  transition: color var(--transition-medium);
+}
+
+body.night-mode .subtitle {
+  color: var(--secondary-color);
+}
+
+/* Countdown Styles */
+.countdown-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: var(--spacing-lg);
+  box-shadow: 0 8px 32px var(--shadow-color);
+  width: 100%;
+  
+  transition: all var(--transition-medium);
+}
+
+body.night-mode .countdown-container {
+  background-color: rgba(45, 36, 59, 0.9);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.countdown-value {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all var(--transition-medium);
+}
+
+body.night-mode .countdown-value {
+  background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.countdown-label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color var(--transition-medium);
+}
+
+body.night-mode .countdown-label {
+  color: var(--secondary-color);
+}
+
+/* Message Styles */
+.message-container {
+  text-align: center;
+  padding: var(--spacing-md);
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 16px var(--shadow-color);
+  max-width: 600px;
+  transition: all var(--transition-medium);
+}
+
+body.night-mode .message-container {
+  background-color: rgba(45, 36, 59, 0.7);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  transition: color var(--transition-medium);
+}
+
+body.night-mode .message {
+  color: var(--secondary-color);
+}
+
+/* Photo Container */
+.photo-container {
+  perspective: 1000px;
+  margin: var(--spacing-lg) 0;
+}
+
+.polaroid {
+  background-color: white;
+  padding: 16px 16px 40px 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: rotate(-3deg);
+  transition: transform var(--transition-medium);
+  max-width: 300px;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) translateY(-10px);
+}
+
+.polaroid-content {
+  overflow: hidden;
+  margin-bottom: var(--spacing-sm);
+}
+
+.couple-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-medium);
+}
+.penguin{
+  width: 20%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.polaroid:hover .couple-photo {
+  transform: scale(1.05);
+}
+
+.polaroid-caption {
+  font-family: var(--font-heading);
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.control-button {
+  background-color: var(--primary-light);
+  border: none;
+  border-radius: 50px;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.control-button:hover {
+  background-color: var(--primary-dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.music-icon, .theme-icon {
+  font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+  margin-top: var(--spacing-xl);
+  text-align: center;
+  width: 100%;
+  padding: var(--spacing-md);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-medium);
+}
+
+body.night-mode footer {
+  color: var(--secondary-color);
+}
