@@ -7,7 +7,7 @@ const BIRTHDAY_CONFIG = {
   date: new Date(2025, 4, 20), // Change this to her actual birthday!
   
   // Birthday person's name
-  name: "Sweetheart",
+  name: "Snigdha",
   
   // Custom messages to display randomly
   messages: [
